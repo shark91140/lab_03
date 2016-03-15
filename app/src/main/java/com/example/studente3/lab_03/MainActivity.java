@@ -12,28 +12,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    private int mScroe = 0;
+    private int mScore = 0;
 
     public void reset(View view) {
-        mScroe = 0;
-        TextView scroeText = (TextView)findViewById(R.id.scroe);
-        scroeText.setText(String.valueOf(mScroe));
+        mScore = 0;
+        display(mScore);
     }
 
-    public void onepoint(View view) {
-        TextView scroeText = (TextView)findViewById(R.id.scroe);
-        scroeText.setText(String.valueOf(++mScroe));
+    private void display(int score) {
+        TextView scoreText = (TextView) findViewById(R.id.scroe);
+        scoreText.setText(String.valueOf(score));
+    }
+
+    public void onePoint(View view) {
+        display(++mScore);
 
     }
 
-    public void twopoint(View view) {
-        TextView scroeText = (TextView)findViewById(R.id.scroe);
-        scroeText.setText(String.valueOf(mScroe = mScroe + 2));
+    public void twoPoint(View view) {
+        display(mScore = mScore + 2);
     }
 
-    public void threepoint(View view) {
-        TextView scroeText = (TextView)findViewById(R.id.scroe);
-        scroeText.setText(String.valueOf(mScroe = mScroe+3));
+    public void threePoint(View view) {
+        display(mScore = mScore +3);
     }
 
 }

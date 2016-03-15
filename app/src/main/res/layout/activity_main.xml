@@ -23,20 +23,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/scroe"
-        android:onClick="threepoint"
+        android:onClick="threePoint"
         android:text="+3分球"/>
     <Button
         android:id="@+id/two"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/three"
-        android:onClick="twopoint"
+        android:onClick="twoPoint"
         android:text="+2分球"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/two"
-        android:onClick="onepoint"
+        android:onClick="onePoint"
         android:text="罰球"/>
 
     <Button
