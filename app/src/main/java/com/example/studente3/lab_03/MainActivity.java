@@ -12,52 +12,43 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    private int mScroe = 0;
-    private int mScroe2 = 0;
+    private int mSrcoe = 0;
+    private int mSrcoe2 = 0;
 
     public void reset(View view) {
-        mScroe = 0;
-        mScroe2 =0;
-        TextView scroeText = (TextView)findViewById(R.id.scroe);
-        scroeText.setText(String.valueOf(mScroe));
-        TextView scroeText2 = (TextView)findViewById(R.id.scroe2);
-        scroeText2.setText(String.valueOf(mScroe2));
+        mSrcoe = 0;
+        mSrcoe2 =0;
+        display(R.id.scroe, mSrcoe);
+        display(R.id.scroe2, mSrcoe2);
     }
 
-    public void onepoint(View view) {
-        TextView scroeText = (TextView)findViewById(R.id.scroe);
-
-        scroeText.setText(String.valueOf(++mScroe));
-
+    private void display(int ID, int srcoe) {
+        TextView scoreText = (TextView) findViewById(ID);
+        scoreText.setText(String.valueOf(srcoe));
     }
 
-    public void twopoint(View view) {
-        TextView scroeText = (TextView)findViewById(R.id.scroe);
-
-        scroeText.setText(String.valueOf(mScroe = mScroe + 2));
-    }
-
-    public void threepoint(View view) {
-        TextView scroeText = (TextView)findViewById(R.id.scroe);
-
-        scroeText.setText(String.valueOf(mScroe = mScroe+3));
-    }
-    public void onepoint2(View view) {
-        TextView scroeText = (TextView)findViewById(R.id.scroe2);
-
-        scroeText.setText(String.valueOf(++mScroe2));
+    public void onePoint(View view) {
+        display(R.id.scroe, ++mSrcoe);
 
     }
 
-    public void twopoint2(View view) {
-        TextView scroeText = (TextView)findViewById(R.id.scroe2);
-
-        scroeText.setText(String.valueOf(mScroe2 = mScroe2+2));
+    public void twoPoint(View view) {
+        display(R.id.scroe, mSrcoe = mSrcoe + 2);
     }
 
-    public void threepoint2(View view) {
-        TextView scroeText = (TextView)findViewById(R.id.scroe2);
+    public void threePoint(View view) {
+        display(R.id.scroe, mSrcoe = mSrcoe + 3);
+    }
+    public void onePoint2(View view) {
+        display(R.id.scroe2, ++mSrcoe2);
 
-        scroeText.setText(String.valueOf(mScroe2 = mScroe2+3));
+    }
+
+    public void twoPoint2(View view) {
+        display(R.id.scroe2, mSrcoe2 = mSrcoe2 + 2);
+    }
+
+    public void threePoint2(View view) {
+        display(R.id.scroe2, mSrcoe2 = mSrcoe2 + 3);
     }
 }

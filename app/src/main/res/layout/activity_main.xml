@@ -12,11 +12,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
-    <RelativeLayout
+        android:layout_weight="1"
+        >
+    <LinearLayout
     android:layout_width="0dp"
     android:layout_height="match_parent"
-    android:layout_weight="1">
+    android:layout_weight="1"
+        android:orientation="vertical">
     <TextView
         android:id="@+id/name1"
             android:layout_width="match_parent"
@@ -31,34 +33,31 @@
         android:layout_height="wrap_content"
         android:text="0"
         android:textSize="50sp"
-        android:layout_below="@+id/name1"
         android:textAlignment="center"/>
     <Button
         android:id="@+id/three"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/scroe"
-        android:onClick="threepoint"
+        android:onClick="threePoint"
         android:text="+3分球"/>
     <Button
         android:id="@+id/two"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/three"
-        android:onClick="twopoint"
+        android:onClick="twoPoint"
         android:text="+2分球"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/two"
-        android:onClick="onepoint"
+        android:onClick="onePoint"
         android:text="罰球"/>
 
-</RelativeLayout>
-    <RelativeLayout
+</LinearLayout>
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="vertical">
         <TextView
             android:id="@+id/name2"
             android:layout_width="match_parent"
@@ -73,34 +72,30 @@
             android:layout_height="wrap_content"
             android:text="0"
             android:textSize="50sp"
-            android:layout_below="@+id/name2"
             android:textAlignment="center"/>
         <Button
             android:id="@+id/three2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/scroe2"
-            android:onClick="threepoint2"
+            android:onClick="threePoint2"
             android:text="+3分球"/>
         <Button
             android:id="@+id/two2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/three2"
-            android:onClick="twopoint2"
+            android:onClick="twoPoint2"
             android:text="+2分球"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/two2"
-            android:onClick="onepoint2"
+            android:onClick="onePoint2"
             android:text="罰球"/>
-    </RelativeLayout>
+    </LinearLayout>
     </LinearLayout>
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_gravity="right"
         android:onClick="reset"
         android:text="重置"/>
 </LinearLayout>
