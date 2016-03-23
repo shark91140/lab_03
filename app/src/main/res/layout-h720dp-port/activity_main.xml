@@ -44,5 +44,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:onClick="reset"
-        android:text="重置" />
+        android:text="重置"
+        android:textSize="@dimen/font_size"/>
 </LinearLayout>

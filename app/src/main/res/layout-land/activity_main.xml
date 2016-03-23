@@ -15,6 +15,7 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
+
         <fragment
             android:id="@+id/fragment_team_a"
             android:name="com.example.studente3.lab_03.CourtCounterFragment"
@@ -44,5 +45,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:onClick="reset"
-        android:text="重置" />
+        android:text="重置"
+        android:textSize="@dimen/font_size"/>
 </LinearLayout>
