@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -15,6 +16,7 @@ import android.widget.TextView;
  */
 public class CourtCounterFragment extends Fragment implements View.OnClickListener {
 
+    private ImageView m_img_team_logo;
     private TextView m_tv_team_name;
     private TextView m_tv_team_score;
     private Button m_btn_three_point;
@@ -38,6 +40,8 @@ public class CourtCounterFragment extends Fragment implements View.OnClickListen
     @Override
     public void onStart() {
         super.onStart();
+
+        m_img_team_logo = (ImageView) getView().findViewById(R.id.img_logo);
         m_tv_team_name = (TextView) getView().findViewById(R.id.tv_name);
         m_tv_team_score = (TextView) getView().findViewById(R.id.tv_scroe);
         m_btn_three_point = (Button) getView().findViewById(R.id.btn_three);
@@ -72,6 +76,12 @@ public class CourtCounterFragment extends Fragment implements View.OnClickListen
 
     public void setName(String name) {
         m_tv_team_name.setText(name);
+    }
+
+    public void setLogo(int res) {
+        if (m_img_team_logo != null) {
+            m_img_team_logo.setImageResource(res);
+        }
     }
 
 

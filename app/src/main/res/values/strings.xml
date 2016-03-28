@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">lab_03</string>
+    <string name="team_a_name">黃蜂</string>
+    <string name="team_b_name">火箭</string>
+    <string name="pika">皮卡丘</string>
+    <string name="jani">傑尼龜</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

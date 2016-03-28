@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
+    private CourtCounterFragment Team_A;
+    private CourtCounterFragment Team_B;
 
 
     @Override
@@ -16,28 +18,27 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        Team_A = (CourtCounterFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.fragment_team_a);
+        Team_B = (CourtCounterFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.fragment_team_b);
         name();
+        setImage();
     }
 
     public void name() {
-        CourtCounterFragment Team_A =
-                (CourtCounterFragment) getSupportFragmentManager()
-                        .findFragmentById(R.id.fragment_team_a);
-        CourtCounterFragment Team_B =
-                (CourtCounterFragment) getSupportFragmentManager()
-                        .findFragmentById(R.id.fragment_team_b);
-        Team_A.setName("黃蜂");
-        Team_B.setName("火箭");
+
+        Team_A.setName(getString(R.string.team_a_name));
+        Team_B.setName(getString(R.string.team_b_name));
+    }
+
+    public void setImage() {
+        Team_A.setLogo(R.drawable.team_a_logo);
+        Team_B.setLogo(R.drawable.team_b_logo);
     }
 
 
     public void reset(View view) {
-        CourtCounterFragment Team_A =
-                (CourtCounterFragment) getSupportFragmentManager()
-                        .findFragmentById(R.id.fragment_team_a);
-        CourtCounterFragment Team_B =
-                (CourtCounterFragment) getSupportFragmentManager()
-                        .findFragmentById(R.id.fragment_team_b);
 
         Team_A.resetScore();
         Team_B.resetScore();
